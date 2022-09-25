@@ -35,6 +35,11 @@ const Navbar = () => {
       return () => window.removeEventListener ('resize', handleResize);
     }, []);
   
+  {/*
+  *
+  *esconde a sidebar no mobile
+  *
+  */}
   useEffect(() => {
       if(screenSize <= 900){
         setActiveMenu(false); 
@@ -50,7 +55,7 @@ const Navbar = () => {
        icon={<AiOutlineMenu/>}
        customFunc ={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
        />
-
+    
       <div className='flex'>
         <NavButton  title='Cart'
         color ='blue' 
